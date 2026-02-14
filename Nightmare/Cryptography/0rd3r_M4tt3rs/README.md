@@ -25,7 +25,8 @@ Look closer at how they are applied.
 ---
 
 ## 🧠 Intended Solution (Writeup)
-🔗 Writeup: <LINK>
+🔗 Writeup: `Link will be provided soon`
+
 
 
 
