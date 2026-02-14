@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>File Manager</h1>
+
+    <form method="POST" action="/create">
+      <input name="filename" placeholder="filename">
+      <button>Create</button>
+    </form>
+      <br>
+      <h3>Files</h3>
+    <ul>
+      {% for f in files %}
+        <li>{{ f }}</li>
+      {% endfor %}
+    </ul>
+
+    <form method="POST" action="/reset">
+        <button class="reset">Reset</button>
+    </form>
+
+    <div class="footer">
+      Internal file manager
+    </div>
+  </div>
+</body>
+
+</html>

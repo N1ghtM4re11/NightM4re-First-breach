@@ -1,0 +1,62 @@
+================================================================================
+                            ASSUMPT10N
+================================================================================
+
+The process is described.
+The result is reachable.
+But not every correct path leads to the truth.
+
+Be careful what you assume.
+
+================================================================================
+                         ALGORITHM DESCRIPTION
+================================================================================
+
+A message M of length L is encrypted using the following process:
+
+1. INITIALIZATION
+   - Create a state array S of size L
+   - Initialize S[i] = i for all positions
+
+2. STATE MIXING
+   - For each byte M[i] in the message:
+     * XOR the current state position with the message byte
+     * Apply a rotation operation to the result
+     * Update certain positions in the state array
+
+3. ENCRYPTION ROUNDS
+   - Perform multiple rounds of transformation
+   - In each round:
+     * For each position i:
+       - Combine S[i] with M[i] using XOR
+       - Apply modular addition with state values
+       - Rotate bits in the result
+     * Occasionally update the state array based on previous values
+
+4. FINALIZATION
+   - The final ciphertext C is produced from the last round
+   - Each C[i] depends on M[i], S[i], and neighboring state values
+
+================================================================================
+                            TECHNICAL NOTES
+================================================================================
+
+- All operations are byte-wise (8-bit values)
+- Rotation operations are performed on individual bytes
+- State updates occur at regular intervals during processing
+- The algorithm is fully deterministic and reversible
+- No external randomness or keys are used
+- The message length directly influences the state size
+
+================================================================================
+                              YOUR TASK
+================================================================================
+
+The encrypted file is: cipher.txt (hex encoded)
+
+Decrypt it to recover the flag.
+
+
+Good luck.
+
+================================================================================

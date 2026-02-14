@@ -1,0 +1,11 @@
+version: "3"
+services:
+  sqli:
+    build: .
+    container_name: sqli-challenge
+    ports:
+      - "1596:1596"
+    environment:
+      - PORT=1596
+    volumes:
+      - ./db.sqlite:/app/db.sqlite

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Welcome <span>{{ username }}</span></h1>
+
+    <p style="text-align:center; margin-top:20px; color:#b3b3b3;">
+            Everything looks normal... for now.
+    </p>
+	<div class="cta">
+    <a href="{{ url_for('auth.logout') }}" class="btn-primary btn-logout">
+        Logout
+    </a>
+</div>
+
+</div>
+{% endblock %}

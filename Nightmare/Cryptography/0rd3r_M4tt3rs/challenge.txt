@@ -1,0 +1,47 @@
+================================================================================
+                            0RD3R_M4TT3RS
+================================================================================
+
+Nothing here is broken.
+The operations are valid.
+Look closer at how they are applied.
+
+================================================================================
+                         ALGORITHM DESCRIPTION
+================================================================================
+
+A message M is encrypted byte-by-byte using the following operations:
+
+OPERATIONS USED:
+1. XOR with position-derived value
+2. Bit rotation (circular shift)
+3. Modular addition (mod 256)
+
+ENCRYPTION PROCESS:
+- For each byte M[i] at position i:
+  * Apply XOR with a value derived from the position
+  * Apply a rotation operation to shift bits
+  * Apply modular addition to mix the result
+
+- All operations are applied consistently to every byte
+- The same set of operations is used throughout
+- Each operation is reversible
+
+TECHNICAL NOTES:
+- All arithmetic is performed modulo 256 (byte-wise)
+- Rotation is circular (bits wrap around)
+- Position indices start at 0
+- The algorithm is deterministic and fully reversible
+- No external keys or random values are used
+
+================================================================================
+                              YOUR TASK
+================================================================================
+
+The encrypted file is: cipher.txt (hex encoded)
+
+Decrypt it to recover the flag.
+
+Good luck.
+
+================================================================================

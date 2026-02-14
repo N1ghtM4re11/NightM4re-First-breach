@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="admin-wrapper">
+
+    <div class="admin-gif">
+        <img src="{{ url_for('static', filename='img/admin.gif') }}" alt="admin">
+    </div>
+
+    <div class="container admin-card">
+        <h1>Welcome <span>Admin</span> 🛡️</h1>
+
+        <p class="admin-msg">
+            You have successfully escalated privileges.
+        </p>
+
+        <div class="flag-box">
+            {{ flag }}
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
